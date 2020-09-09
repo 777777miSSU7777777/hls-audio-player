@@ -57,9 +57,6 @@ const HLSAudioPlayer = (props: Props) => {
 
     const onSeekEnd = () => audioRef.current?.play();
 
-    useEffect(() => {
-        console.log('marginLeft', `calc(${currentTime / duration * 100} - 6px)`);
-    }, [currentTime]);
     return (
         <div className={styles.hlsAudioPlayer}>
             <audio 
@@ -82,9 +79,8 @@ const HLSAudioPlayer = (props: Props) => {
                 />
                 <div className={styles.timeline} />
                 <div className={styles.progressLine} style={{ width: `${currentTime / duration * 100}%`}} />
-                <div className={styles.progressThumb} style={{ marginLeft: `calc(${currentTime / duration * 100 }% - 2px)`}} />
+                <div className={styles.progressThumb} style={{ marginLeft: `calc(${currentTime / duration * 100 }% - 8px)`}} />
             </div>
-
         </div>
     )
 }

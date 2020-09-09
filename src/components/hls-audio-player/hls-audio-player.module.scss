@@ -20,6 +20,7 @@
             position: absolute;
             top: -6px;
             width: 100%;
+            opacity: 0;
         }
 
         .timeline {
@@ -34,7 +35,6 @@
         .progressLine {
             position: absolute;
             background-color: #000;
-            // width: 60%;
             height: 8px;
             border-radius: 10px;
             pointer-events: none;
@@ -43,8 +43,9 @@
         .progressThumb {
             position: absolute;
             background-color: black;
-            width: 16px;
-            height: 16px;
+            width: 12px;
+            height: 12px;
+            border: 2px solid rgba(0, 0, 0, 0);
             top: -4px;
             border-radius: 10px;
             opacity: 0;
