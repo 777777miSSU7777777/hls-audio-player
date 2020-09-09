@@ -4,6 +4,16 @@
     justify-content: center;
     align-items: center;
 
+    .leftControls {
+        margin-right: 8px;
+
+        .playPauseButton {
+            width: 16px;
+            height: 16px;
+            margin-bottom: 18px;
+        }
+    }
+
     .progressWrapper {
         position: relative;
         height: 8px;

@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styles from './hls-audio-player.module.scss';
 import Hls from 'hls.js';
+import playButton from '../../assets/icons/play-button.svg';
+import pauseButton from '../../assets/icons/pause-button.svg';
 
 interface Props {
     hlsSource: string;
@@ -57,6 +59,14 @@ const HLSAudioPlayer = (props: Props) => {
 
     const onSeekEnd = () => audioRef.current?.play();
 
+    const onPlayPauseClick = () => {
+        if (isPlaying) {
+            audioRef.current!.pause();
+        } else {
+            audioRef.current!.play();
+        }
+    }
+
     return (
         <div className={styles.hlsAudioPlayer}>
             <audio 
@@ -65,6 +75,11 @@ const HLSAudioPlayer = (props: Props) => {
                 onPlay={onPlay}
                 onPause={onPause}
             />
+            <div className={styles.leftControls}>
+                <div className={styles.playPauseButton} onClick={onPlayPauseClick}>
+                    <img src={isPlaying ? pauseButton : playButton} />
+                </div>
+            </div>
             <div className={styles.progressWrapper}>
                 <input 
                     type='range' 
