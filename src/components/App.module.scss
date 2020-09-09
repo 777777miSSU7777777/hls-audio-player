@@ -1,3 +1,20 @@
 .app {
     font-size: 24px;
 }
+
+.formWrapper {
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.playerWrapper {
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    margin-top: 5%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}

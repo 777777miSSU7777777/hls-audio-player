@@ -1,0 +1,54 @@
+.hlsAudioPlayer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .progressWrapper {
+        position: relative;
+        height: 8px;
+        width: 100%;
+        z-index: 3;
+
+        &:hover {
+            .progressThumb {
+                opacity: 0.8;
+            }
+        }
+
+        .rangeInput {
+            position: absolute;
+            top: -6px;
+            width: 100%;
+        }
+
+        .timeline {
+            position: absolute;
+            background-color: #777;
+            width: 100%;
+            height: 8px;
+            border-radius: 10px;
+            pointer-events: none;
+        }
+
+        .progressLine {
+            position: absolute;
+            background-color: #000;
+            // width: 60%;
+            height: 8px;
+            border-radius: 10px;
+            pointer-events: none;
+        }
+
+        .progressThumb {
+            position: absolute;
+            background-color: black;
+            width: 16px;
+            height: 16px;
+            top: -4px;
+            border-radius: 10px;
+            opacity: 0;
+            pointer-events: none
+        }
+    }
+}

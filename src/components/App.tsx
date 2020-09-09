@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './App.module.scss';
+import HLSAudioPlayer from './hls-audio-player/hls-audio-player';
+import HLSSourceForm from './hls-source-form/hls-source-form';
 
-function App() {
+const App = () => {
+  const [hlsSource, setHlsSource] = useState('');
+  
   return (
     <div className={styles.app}>
-      HLS Audio Player
+      <div className={styles.formWrapper}>
+        <HLSSourceForm hlsSource={hlsSource} setHlsSource={setHlsSource} />
+      </div>
+      <div className={styles.playerWrapper}>
+        <HLSAudioPlayer hlsSource={hlsSource} />
+      </div>
     </div>
   );
 }
